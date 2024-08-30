@@ -13,9 +13,10 @@ form.addEventListener("submit", (e) => {
 
 function draw() {
   ul.innerHTML = "";
-  todos.forEach((ele, i) => {
+
+  for (let i = 0; i <= todos.length - 1; i++) {
     const li = document.createElement("li");
-    li.textContent = ele;
+    li.textContent = todos[i];
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "remove";
     deleteBtn.style.marginLeft = "10px";
@@ -24,7 +25,20 @@ function draw() {
     });
     li.appendChild(deleteBtn);
     ul.appendChild(li);
-  })
+  }
+
+  // todos.forEach((ele, i) => {
+  //   const li = document.createElement("li");
+  //   li.textContent = ele;
+  //   const deleteBtn = document.createElement("button");
+  //   deleteBtn.textContent = "remove";
+  //   deleteBtn.style.marginLeft = "10px";
+  //   deleteBtn.addEventListener("click", () => {
+  //     deleteTodo(i);
+  //   });
+  //   li.appendChild(deleteBtn);
+  //   ul.appendChild(li);
+  // })
 }
 
 

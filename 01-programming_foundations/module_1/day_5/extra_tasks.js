@@ -1,4 +1,4 @@
-// Task1
+// Task 1
 // Create an array of your favorite fruits and print the first and last elements.
 
 // Task 2
