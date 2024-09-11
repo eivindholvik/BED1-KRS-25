@@ -1,0 +1,18 @@
+#img1 {
+    float: left;
+}
+
+#img2 {
+    float: right;
+}
+
+#img3 {
+    float: none;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+p {
+    width: 400px;
+}

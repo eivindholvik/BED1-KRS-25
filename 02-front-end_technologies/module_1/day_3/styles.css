@@ -1,0 +1,50 @@
+/* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+} */
+
+p {
+    background: rgb(174, 167, 167);
+    display: inline;
+}
+
+div {
+    height: 9rem;
+
+    width: 16rem;
+    background: magenta;
+}
+
+.border {
+    min-width: 5rem;
+    /* display: inline-block; */
+    padding: 2rem;
+    background: red;
+    border-style: dotted solid dashed inset;
+    border-color: yellow blue;
+    border-width: 1rem;
+    /* border: 1rem dotted yellow; */
+    margin-top: 2rem;
+    transition: transform ease-in 3s;
+    transition-delay: 1s;
+    /* transition: width ease-in 5s, height ease-out 5s, background-color 1s; */
+}
+
+.border:hover {
+    /* background: salmon; */
+    transform: rotate(10deg) translate(100%, 10%) scale(2);
+    /* height: 10rem;
+    width: 17rem; */
+}
+
+#hei {
+    border: 0.5rem solid salmon;
+    margin: 5rem;
+    margin-inline: auto;
+}
+
+.box {
+    box-sizing: border-box;
+}
