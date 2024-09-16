@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <img
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcMCb_7kCM9qiv4edgtgOMGXBgThLblEhrLCpytQWbtYsJxMkp"
+                alt="elephant"
+                width="200px"
+            />
+            <button>Click</button>
+        </div>
+        <script>
+            const ul = document.createElement("ul");
+            const innerValues = ["lorem", "ipsum", "lalala"];
+            innerValues.forEach((ele) => {
+                const li = document.createElement("li");
+                li.textContent = ele;
+                ul.appendChild(li);
+            });
+            document
+                .querySelector("div")
+                .insertBefore(ul, document.querySelector("button"));
+            // const newLI = document.createElement("li");
+            // newLI.textContent = "This is created with createElement";
+            // document.querySelector("ul").appendChild(newLI);
+
+            // document.querySelector("ul").innerHTML += "<li>This is new</li>";
+        </script>
+    </body>
+</html>

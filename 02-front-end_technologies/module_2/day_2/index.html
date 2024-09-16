@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Module 2, day 2</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Lecture 2.2</h1>
+        <form id="sub">
+            <label for="sub_fname">First Name:</label>
+            <input name="sub_fname" id="sub_fname" type="text" />
+            <p id="sub_fname_err"></p>
+            <label for="sub_lname">Last Name:</label>
+            <input name="sub_lname" id="sub_lname" type="text" />
+            <p id="sub_lname_err"></p>
+            <input type="submit" value="Subscribe" />
+        </form>
+
+        <div id="div_click">
+            <button id="btn_click">Click me!</button>
+        </div>
+        <script>
+            const clickDivFunc = (e) => {
+                console.log("The div was clicked!");
+            };
+
+            document
+                .getElementById("div_click")
+                .addEventListener("click", clickDivFunc, true);
+            document
+                .getElementById("btn_click")
+                .addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    console.log("The button was clicked!");
+                });
+
+            document.querySelector("#sub").addEventListener("submit", (e) => {
+                e.preventDefault();
+                console.log("started the form event");
+                const domFname = document.getElementById("sub_fname");
+                const domLname = document.getElementById("sub_lname");
+
+                // validate
+                let validateOK = true;
+                if (domFname.value.length < 2) {
+                    document.querySelector("#sub_fname_err").textContent =
+                        "First name needs at least 2 chars";
+                    validateOK = false;
+                }
+                if (domLname.value.length < 2) {
+                    document.querySelector("#sub_lname_err").textContent =
+                        "Last name needs at least 2 chars";
+                    validateOK = false;
+                }
+
+                if (!validateOK) {
+                    return;
+                }
+                console.log("Form is submitted");
+
+                // Send http request
+            });
+        </script>
+    </body>
+</html>
