@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>JavaScript Clock</h2>
+        <div id="txt"></div>
+        <script>
+            // document.querySelector("h2").addEventListener("load", startTime); Usikker på hvorfor denne ikke funker
+            startTime();
+            function startTime() {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById("txt").textContent =
+                    h + ":" + m + ":" + s;
+                setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                let out;
+                if (i < 10) {
+                    out = "0" + i;
+                } else {
+                    out = String(i);
+                }
+                return out;
+            }
+        </script>
+    </body>
+</html>
