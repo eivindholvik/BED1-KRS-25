@@ -7,4 +7,9 @@ $("document").ready(() => {
   $("div p:nth-child(3)").css("background-color", "yellow");
   $("div p:nth-child(4n)").css("background-color", "grey");
 
+  $("h1").addClass("heading_1")
+  $("h1").removeClass("heading_1")
+  $("h1").toggleClass("heading_1")
+  $("h1").toggleClass("heading_1")
+
 })
