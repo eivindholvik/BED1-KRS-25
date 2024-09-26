@@ -1,0 +1,29 @@
+.p-3 {
+    padding: 1.25rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.p-1 {
+    padding: 0.75rem;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.bg-dark {
+    background-color: darkblue;
+}
+
+.text-white {
+    color: white;
+}
+
+.my_heading {
+    padding: 1.25rem;
+    color: white;
+    background-color: darkblue;
+}
