@@ -4,11 +4,17 @@
 
 // PLAYLIST
 class Playlist {
+  #id;
   #createdBy;
   #name;
   #songs = [];
   #createdAt;
+
+  static count = 0;
+
   constructor(createdBy, name) {
+    this.#id = ++this.constructor.count;
+    this.#name = name;
     this.#createdBy = createdBy;
     this.#createdAt = new Date();
   }
@@ -20,6 +26,10 @@ class Playlist {
       return;
     }
     this.#songs.push(song);
+  }
+
+  getName() {
+    return this.#name;
   }
 
   removeSong(song) {
@@ -37,6 +47,10 @@ class Playlist {
     });
     return [...this.#songs];
   }
+
+  getId() {
+    return this.#id;
+  }
 }
 
 // USER
@@ -48,14 +62,41 @@ class User {
     this.#userName = userName;
     this.#createdAt = new Date();
   }
-  createPlaylist() {
-    const newPlaylist = new Playlist(this, "Rock Songs")
+
+  createPlaylist(playlistName) {
+    this.#playlists.forEach((playlist) => {
+      if (playlist.getName() === playlistName) {
+        console.log(`Playlist name already exists for user: ${playlistName}`);
+        return;
+      }
+    })
+    const newPlaylist = new Playlist(this, playlistName)
     this.#playlists.push(newPlaylist);
     return newPlaylist;
   }
 
   addPlaylist(playlist) {
+    const checkName = playlist.getName();
+    this.#playlists.forEach((playlist) => {
+      if (playlist.getName() === checkName) {
+        console.log(`Playlist name already exists for user: ${checkName}`);
+        return;
+      }
+    })
     this.#playlists.push(playlist);
+  }
+
+  getPlaylistOfId(id) {
+    return this.#playlists.find((playlist) => {
+      if (playlist.getId() === id) return true;
+    })
+  }
+
+  //Make names for playlists unique per user for this to work.
+  getPlaylistOfName(name) {
+    return this.#playlists.find((playlist) => {
+      if (playlist.getName() === name) return true;
+    })
   }
 
   removePlaylist(playlist) {
@@ -120,15 +161,17 @@ const song12 = new Song("Rolling in the Deep", 228, "Adele", "21", "Pop");
 
 // Usage example
 const user = new User("MrWorldWide", new Date(), []); // Passing new Date and [] is a bit awkward, we will learn ways to make this simpler.
-const playlist = new Playlist(user, "Vibes", new Date(), []);
+const playlist = user.createPlaylist("Vibes");
 
 playlist.addSong(song1);
 playlist.addSong(song2);
 playlist.addSong(song3);
 playlist.addSong(song4);
-playlist.addSong(song1); // Testing duplicate, should log: 'Song: Billie Jean, already exists in this playlist.'
+playlist.addSong(song1); // Testing duplicate, should log: 'Song: Billie Jean, already exists in this playlist.
 
-console.log("Songs in playlist:");
-// playlist.getSongs().forEach(song => console.log(song.getSongDetails()));
-playlist.getSongs();
+// console.log("Songs in playlist:");
+// // playlist.getSongs().forEach(song => console.log(song.getSongDetails()));
+// user.removePlaylist(playlist);
+// console.log(user.getPlaylists());
 
+console.log(user.getPlaylistOfId(1));
