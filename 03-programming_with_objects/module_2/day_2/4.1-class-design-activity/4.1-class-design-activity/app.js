@@ -71,9 +71,18 @@ class User {
       }
     })
     const newPlaylist = new Playlist(this, playlistName)
+    console.log(`${this.#userName} created the playlist ${playlistName}`);
     this.#playlists.push(newPlaylist);
     return newPlaylist;
   }
+
+  // get userName() {
+  //   return this.#userName;
+  // }
+
+  // set userName(newName) {
+  //   this.#userName = newName;
+  // }
 
   addPlaylist(playlist) {
     const checkName = playlist.getName();
@@ -83,6 +92,7 @@ class User {
         return;
       }
     })
+    console.log(`${this.#userName} created the playlist ${playlist.getName()}`);
     this.#playlists.push(playlist);
   }
 
@@ -161,6 +171,10 @@ const song12 = new Song("Rolling in the Deep", 228, "Adele", "21", "Pop");
 
 // Usage example
 const user = new User("MrWorldWide", new Date(), []); // Passing new Date and [] is a bit awkward, we will learn ways to make this simpler.
+
+// user.userName = "Hei";
+// console.log(user.userName);
+// console.log(user);
 const playlist = user.createPlaylist("Vibes");
 
 playlist.addSong(song1);
@@ -174,4 +188,4 @@ playlist.addSong(song1); // Testing duplicate, should log: 'Song: Billie Jean, a
 // user.removePlaylist(playlist);
 // console.log(user.getPlaylists());
 
-console.log(user.getPlaylistOfId(1));
+// console.log(user.getPlaylistOfId(1));
