@@ -3,18 +3,106 @@
 
 
 // PLAYLIST
+class Playlist {
+  #createdBy;
+  #name;
+  #songs = [];
+  #createdAt;
+  constructor(createdBy, name) {
+    this.#createdBy = createdBy;
+    this.#createdAt = new Date();
+  }
 
+  addSong(song) {
+    const index = this.#songs.indexOf(song);
+    if (index !== -1) {
+      console.log(`Song ${song.getTitle()} already exists in playlist`);
+      return;
+    }
+    this.#songs.push(song);
+  }
+
+  removeSong(song) {
+    const removeIndex = this.#songs.indexOf(song);
+    if (removeIndex === -1) return;
+    this.#songs.splice(removeIndex, 1);
+  }
+
+  getSongs() {
+    this.#songs.forEach((song, i) => {
+      if (i !== 0) {
+        console.log("--------------------");
+      }
+      console.log(song.getSongDetails());
+    });
+    return [...this.#songs];
+  }
+}
 
 // USER
+class User {
+  #userName;
+  #createdAt;
+  #playlists = [];
+  constructor(userName) {
+    this.#userName = userName;
+    this.#createdAt = new Date();
+  }
+  createPlaylist() {
+    const newPlaylist = new Playlist(this, "Rock Songs")
+    this.#playlists.push(newPlaylist);
+    return newPlaylist;
+  }
 
+  addPlaylist(playlist) {
+    this.#playlists.push(playlist);
+  }
+
+  removePlaylist(playlist) {
+    const removeIndex = this.#playlists.indexOf(playlist);
+    if (removeIndex === -1) return;
+    this.#playlists.splice(removeIndex, 1);
+  }
+
+  getPlaylists() {
+    return [...this.#playlists];
+  }
+
+}
 
 // SONG
+class Song {
+  #title;
+  #duration;
+  #artist;
+  #album;
+  #genre;
+
+  constructor(title, duration, artist, album, genre) {
+    this.#title = title;
+    this.#duration = duration;
+    this.#artist = artist;
+    this.#album = album;
+    this.#genre = genre;
+  }
+
+  getSongDetails() {
+    const seconds = this.#duration % 60;
+    const minutes = Math.floor(this.#duration / 60);
+    return `${this.#title} by ${this.#artist}\nAlbum: ${this.#album}\nGenre: ${this.#genre}\nDuration: ${minutes}:${seconds}`;
+  }
+
+  getTitle() {
+    return this.#title;
+  }
+}
+
 
 // ================================
 
 // Provided demo data ( remove /* and */ to test your classes)
 // ================================
-/*
+
 
 // Example Songs
 const song1 = new Song("Billie Jean", 294, "Michael Jackson", "Thriller", "Pop");
@@ -41,6 +129,6 @@ playlist.addSong(song4);
 playlist.addSong(song1); // Testing duplicate, should log: 'Song: Billie Jean, already exists in this playlist.'
 
 console.log("Songs in playlist:");
-playlist.getSongs().forEach(song => console.log(song.getSongDetails()));
+// playlist.getSongs().forEach(song => console.log(song.getSongDetails()));
+playlist.getSongs();
 
-*/
