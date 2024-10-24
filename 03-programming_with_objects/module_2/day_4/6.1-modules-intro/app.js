@@ -21,6 +21,11 @@
 // Importing the math functions from mathModule.js
 import { add, subtract, multiply, divide } from './mathModule.js';
 
+// import { add as mathAdd, subtract, multiply, divide } from './mathModule.js';
+
+// import names from "./mathModule.js";
+// console.log(names);
+
 // Example usage of the imported math functions
 console.log('Addition (5 + 3):', add(5, 3)); // Should log 8
 console.log('Subtraction (5 - 3):', subtract(5, 3)); // Should log 2

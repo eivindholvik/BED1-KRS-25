@@ -53,3 +53,6 @@ export function multiply(a, b) {
 export function divide(a, b) {
     return b === 0 ? 'Error: Division by zero' : a / b;
 }
+
+const names = ["Eivind", "Alex"];
+export default names;

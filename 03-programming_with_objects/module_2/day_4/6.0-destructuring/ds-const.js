@@ -17,6 +17,8 @@ class User {
     }
 }
 
+// const myself = new User("Eivind", [], new Date(-200000))
+
 /*
     Example 1: Creating an existing user with data from an API:
     - Even though the User constructor uses the 'new' keyword, this doesn’t always mean 
