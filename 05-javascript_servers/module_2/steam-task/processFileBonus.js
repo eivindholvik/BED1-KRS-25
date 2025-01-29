@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { Transform } = require('stream');
+const { Transform } = require('node:stream');
 
 const inputPath = path.join(__dirname, 'input.txt');
 const outputPath = path.join(__dirname, 'output.txt');
