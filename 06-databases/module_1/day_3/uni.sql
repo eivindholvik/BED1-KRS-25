@@ -1,5 +1,5 @@
-DROP DATABASE uni;
 CREATE DATABASE uni;
+SET SQL_SAFE_UPDATES = 0;
 
 USE uni;
 
@@ -88,8 +88,6 @@ FROM events
 JOIN students ON StudentID=OrganizerID
 WHERE EventID = 2;
 
-SELECT * FROM students;
-
 /*
 UPDATE students
 SET FirstName="Johnny";
@@ -97,7 +95,61 @@ SET FirstName="Johnny";
 
 UPDATE students SET FirstName='Johnny' WHERE StudentID=6;
 
-DELETE FROM students WHERE FirstName REGEXP '.*[0-9].*';
+-- DELETE FROM students WHERE FirstName REGEXP '.*[0-9].*';
 
 DELETE FROM students WHERE StudentID=12;
+
+ALTER TABLE uni.students ADD Email VARCHAR(255);
+
+ALTER TABLE uni.students MODIFY COLUMN Email VARCHAR(500);
+
+ALTER TABLE uni.students DROP COLUMN Email;
+
+
+
+/*
+Add column Email again.
+Fill it with a query, with the format FirstName.LastName@company.no
+Is this unique?
+If not, make it unique
+*/
+
+INSERT INTO uni.students (FirstName, LastName, Birthday) VALUES
+('John', 'Doe', '2002-1-3');
+
+ALTER TABLE uni.students ADD COLUMN email VARCHAR(255);
+ALTER TABLE uni.students ADD CONSTRAINT unique_email UNIQUE (email);
+SET SQL_SAFE_UPDATES = 0;
+UPDATE uni.students SET email = LOWER(CONCAT(FirstName, '.', LastName, StudentID,'@company.no'));
+-- Concat 'Eivind.Holvik5@company.no'
+-- Lower 'eivind.holvik5@company.no'
+SET SQL_SAFE_UPDATES = 1;
+
+SELECT * FROM students;
+
+
+-- TRANSACTIONS
+/*
+START TRANSACTION;
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+    INSERT INTO students (FirstName, LastName) VALUES ('Robert', 'Robertson');
+COMMIT;
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM students WHERE LastName = 'Robertson';
+SET SQL_SAFE_UPDATES = 1;
+
+*/
+
+CALL uni.new_procedure();
+
+SELECT * FROM uni.students;
+
+
 
