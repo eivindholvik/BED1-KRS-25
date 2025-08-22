@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <!-- <link rel="stylesheet" href="/stylesheets/index.css"> -->
+  <link rel="stylesheet" href="/stylesheets/login.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <%-include('./partials/navbar.ejs')%>
+    <section class="prompt">
+
+      <h2>
+        <%= title %>
+      </h2>
+      <p>Welcome to the <%= title %> DAB system
+      </p>
+      <section class="home">
+        <div class="row p-1"><a class="btn btn-danger" href="/login">Login</a></div>
+        <div class="row p-1"><a class="btn btn-danger" href="/signup">Sign up</a></div>
+        <hr>
+        <form action="/logout" method="post" class="form-control-lg">
+          <button class="btn btn-danger " type="submit">Sign out</button>
+        </form>
+
+      </section>
+    </section>
+<%-include('./partials/footer.ejs')%>
+
+</body>
+
+</html>
