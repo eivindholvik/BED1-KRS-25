@@ -1,0 +1,67 @@
+version: "3.9"
+
+services:
+    db:
+        image: mysql:8.0
+        container_name: todo-mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpass}
+            MYSQL_DATABASE: ${MYSQL_DATABASE:-todos}
+            MYSQL_USER: ${MYSQL_USER:-todo_user}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD:-todo_pass}
+        ports:
+            - "${MYSQL_PORT:-3306}:3306"
+        volumes:
+            - db_data:/var/lib/mysql
+            - ./db/init:/docker-entrypoint-initdb.d
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "mysqladmin ping -h localhost -p$${MYSQL_ROOT_PASSWORD} --silent",
+                ]
+            interval: 5s
+            timeout: 3s
+            retries: 20
+        networks:
+            - appnet
+
+    api:
+        build: ./backend
+        container_name: todo-api
+        depends_on:
+            db:
+                condition: service_healthy
+        environment:
+            NODE_ENV: ${NODE_ENV:-development}
+            PORT: ${API_PORT:-3001}
+            DB_HOST: db
+            DB_PORT: 3306
+            DB_NAME: ${MYSQL_DATABASE:-todos}
+            DB_USER: ${MYSQL_USER:-todo_user}
+            DB_PASS: ${MYSQL_PASSWORD:-todo_pass}
+        ports:
+            - "${API_PORT:-3001}:3001"
+        networks:
+            - appnet
+
+    web:
+        build: ./frontend
+        container_name: todo-web
+        depends_on:
+            - api
+        environment:
+            NODE_ENV: ${NODE_ENV:-development}
+            PORT: ${WEB_PORT:-3000}
+            API_BASE_URL: "http://api:3001"
+        ports:
+            - "${WEB_PORT:-3000}:3000"
+        networks:
+            - appnet
+
+volumes:
+    db_data:
+
+networks:
+    appnet:
+        driver: bridge

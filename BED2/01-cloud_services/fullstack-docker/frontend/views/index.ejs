@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><% title %></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Todos</h1>
+            <form action="/add" method="post" style="margin-bottom: 1rem">
+                <input
+                    type="text"
+                    name="title"
+                    placeholder="New todo..."
+                    required
+                />
+                <button type="submit">Add</button>
+            </form>
+
+            <ul>
+                <% for (const t of todos) { %>
+                <li style="margin-bottom: 0.5rem">
+                    <form
+                        action="/toggle/<%= t.id %>"
+                        method="post"
+                        style="display: inline"
+                    >
+                        <input
+                            type="hidden"
+                            name="title"
+                            value="<%= t.title %>"
+                        />
+                        <input
+                            type="hidden"
+                            name="completed"
+                            value="<%= !t.completed %>"
+                        />
+                        <button type="submit" style="margin-right: 0.5rem">
+                            <%= t.completed ? '✅' : '⬜️' %>
+                        </button>
+                    </form>
+                    <strong><%= t.title %></strong>
+                    <form
+                        action="/delete/<%= t.id %>"
+                        method="post"
+                        style="display: inline; margin-left: 0.5rem"
+                    >
+                        <button type="submit">🗑️</button>
+                    </form>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
