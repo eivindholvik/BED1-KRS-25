@@ -1,0 +1,39 @@
+services:
+  backend:
+    build: ./backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - redis
+    networks:
+      - appnet
+
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpass
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - appnet
+    
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - appnet
+
+
+volumes:
+  dbdata:
+
+networks:
+  appnet:
