@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2025-09-05T07:49:35Z"
+  generation: 1
+  labels:
+    app: howzit-greeter
+  name: howzit-greeter
+  namespace: default
+  resourceVersion: "1762"
+  uid: d069b1c1-576c-4633-8e56-7434447bddb7
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 4 
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: howzit-greeter
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: howzit-greeter
+    spec:
+      containers:
+      - image: nicholaslennox/howzit-greeter
+        imagePullPolicy: Always
+        name: howzit-greeter
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        ports:
+          - containerPort: 80
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2025-09-05T07:49:38Z"
+    lastUpdateTime: "2025-09-05T07:49:38Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-09-05T07:49:35Z"
+    lastUpdateTime: "2025-09-05T07:49:38Z"
+    message: ReplicaSet "howzit-greeter-7b9bc5c5fc" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1
