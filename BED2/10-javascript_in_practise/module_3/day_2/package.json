@@ -1,0 +1,19 @@
+{
+    "name": "day_2",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test2": "node --experimental-vm-modules ./node_modules/.bin/jest",
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "jest": "^30.2.0"
+    },
+    "dependencies": {
+        "ws": "^8.19.0"
+    }
+}
