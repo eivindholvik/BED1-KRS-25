@@ -1,0 +1,15 @@
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\bin\Debug\net10.0\MyFileTest.exe
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\bin\Debug\net10.0\MyFileTest.deps.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\bin\Debug\net10.0\MyFileTest.runtimeconfig.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\bin\Debug\net10.0\MyFileTest.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\bin\Debug\net10.0\MyFileTest.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.AssemblyInfoInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.AssemblyInfo.cs
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.csproj.CoreCompileInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.sourcelink.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\refint\MyFileTest.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\MyFileTest.genruntimeconfig.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_2\MyFileTest\obj\Debug\net10.0\ref\MyFileTest.dll

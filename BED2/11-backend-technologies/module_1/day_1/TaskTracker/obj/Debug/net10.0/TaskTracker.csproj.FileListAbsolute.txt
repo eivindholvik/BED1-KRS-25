@@ -1,0 +1,15 @@
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\bin\Debug\net10.0\TaskTracker.exe
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\bin\Debug\net10.0\TaskTracker.deps.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\bin\Debug\net10.0\TaskTracker.runtimeconfig.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\bin\Debug\net10.0\TaskTracker.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\bin\Debug\net10.0\TaskTracker.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.AssemblyInfoInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.AssemblyInfo.cs
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.csproj.CoreCompileInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.sourcelink.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\refint\TaskTracker.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\TaskTracker.genruntimeconfig.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_1\TaskTracker\obj\Debug\net10.0\ref\TaskTracker.dll

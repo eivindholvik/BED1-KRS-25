@@ -1,0 +1,14 @@
+#placeOrderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

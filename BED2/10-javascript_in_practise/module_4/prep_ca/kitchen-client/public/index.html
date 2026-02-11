@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="site.css" />
+        <script src="index.js" defer></script>
+        <title>Kitchen</title>
+    </head>
+    <body>
+        <h1>Kitchen client</h1>
+        <div id="placeOrderContainer">
+            <p>
+                Below is a queue to show the next order to prepare and the order
+                orders coming
+            </p>
+            <p>
+                When you have completed the current order, mark it as complete
+            </p>
+            <div>
+                <button id="completeOrderBtn">Complete order</button>
+                <button id="refreshListBtn">Refresh</button>
+            </div>
+        </div>
+        <h2>Next order</h2>
+        <div id="nextOrderNum"></div>
+        <h2>Pending orders</h2>
+        <div id="orderQueue">
+            <ul></ul>
+        </div>
+    </body>
+</html>
