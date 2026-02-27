@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CounterApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7fd272b7608e8b0b8a947d4b0239e7fee5b44dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cc9cf0e8a70605c29f53c83c6560ab39bed51a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CounterApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CounterApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

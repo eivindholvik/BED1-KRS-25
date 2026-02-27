@@ -1,0 +1,24 @@
+@page "/students/{Id:int}"
+@using CounterApp.Services
+@inject StudentService StudentService
+
+<h3>Student details:</h3>
+
+@if(student is null) {
+  <p>Student not found.</p>
+}
+else {
+  <p><b>Name:</b> @student.Name</p>
+  <p><b>Score:</b> @student.Score</p>
+  <a href="/students">Back to list</a>
+}
+
+@code{
+    [Parameter] public int Id {get; set;}
+    private CounterApp.Models.Student? student;
+
+    protected override void OnParametersSet()
+    {
+        student = StudentService.GetById(Id);
+    }
+}

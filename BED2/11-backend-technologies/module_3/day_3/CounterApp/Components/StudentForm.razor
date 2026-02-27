@@ -3,18 +3,19 @@
 @inject StudentService Students
 
 <h3>Add student</h3>
-
+<form @onsubmit:preventDefault>
 <div>
-  <label>Name:</label>
-  <input type="text" @bind="name" />
+  <label for="name">Name:</label>
+  <input id="name" type="text" @bind="name" />
 </div>
 
 <div>
-  <label>Score:</label>
-  <input type="number" @bind="score" />
+  <label for="score">Score:</label>
+  <input id="score" type="number" @bind="score" />
 </div>
 
 <button @onclick="Add">Add</button>
+</form>
 
 @if (!string.IsNullOrWhiteSpace(error)){
   <p style="color: red">@error</p>

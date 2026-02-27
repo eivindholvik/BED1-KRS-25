@@ -1,49 +1,72 @@
 @page "/students"
 @rendermode InteractiveServer
 @using CounterApp.Services
+@using System.Drawing
 @inject StudentService StudentService
 @inject NavigationManager Nav
 
 <StudentForm OnAdded="Refresh" />
 
 <hr />
+<h1 style="color: @color">debug</h1>
 
+<form @onsubmit:preventDefault>
 <div>
   <label>Min score:</label>
-  <input type="number" @bind="minScore" />
+  <input type="number" @bind="tempMinScore" />
   <label>Sort:</label>
-  <select @bind="sort">
+  <select @bind="tempSort">
     <option value="name">Name</option>
     <option value="score">Score</option>
   </select>
   <button @onclick="ApplyQuery">Apply</button>
 
+
 </div>
+  </form>
 
 <StudentList Students="FilteredStudents" />
 
 @code{
 
+  private int tempMinScore = 0;
+  private string tempSort = "name";
+
     private int minScore = 0;
     private string sort = "name";
+
+    private int k = 0;
+    private List<string> colors = ["yellow", "blue", "pink", "black"];
+
+    private string color;
 
     private Task Refresh() => Task.CompletedTask;
     private IReadOnlyList<CounterApp.Models.Student> FilteredStudents => GetFiltered();
 
     private IReadOnlyList<CounterApp.Models.Student> GetFiltered()
     {
+        if(k >= colors.Count -1){
+          k = 0;
+        } else {
+          k++;
+        }
+        color = colors[k];
         var q = StudentService.GetAll().Where(s => s.Score >= minScore);
         q = sort == "score" ? q.OrderByDescending(s => s.Score) : q.OrderBy(s => s.Name);
+
         return q.ToList();
     }
 
     private void ApplyQuery()
     {
+        minScore = tempMinScore;
+        sort = tempSort;
         Nav.NavigateTo($"/students?minScore={minScore}&sort={sort}");
     }
 
     protected override void OnInitialized()
     {
+        color = colors[k];
         var uri = Nav.ToAbsoluteUri(Nav.Uri);
         var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
 
