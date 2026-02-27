@@ -1,0 +1,53 @@
+@rendermode InteractiveServer
+@using CounterApp.Services
+@inject StudentService Students
+
+<h3>Add student</h3>
+
+<div>
+  <label>Name:</label>
+  <input type="text" @bind="name" />
+</div>
+
+<div>
+  <label>Score:</label>
+  <input type="number" @bind="score" />
+</div>
+
+<button @onclick="Add">Add</button>
+
+@if (!string.IsNullOrWhiteSpace(error)){
+  <p style="color: red">@error</p>
+}
+
+
+@code{
+
+  private string name = "";
+  private int score = 0;
+  private string? error;
+
+  [Parameter] public EventCallback OnAdded {get; set;}
+
+  private async Task Add()
+  {
+
+    error = null;
+
+    if(string.IsNullOrWhiteSpace(name)) {
+      error = "Name is required.";
+      return;
+    }
+    if(score < 0 || score > 100) {
+      error = "Score must be 0-100.";
+      return;
+
+    }
+
+    Students.Add(name.Trim(), score);
+    name = "";
+    score = 0;
+
+    await OnAdded.InvokeAsync();
+  }
+}

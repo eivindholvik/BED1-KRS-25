@@ -1,0 +1,59 @@
+@page "/students"
+@rendermode InteractiveServer
+@using CounterApp.Services
+@inject StudentService StudentService
+@inject NavigationManager Nav
+
+<StudentForm OnAdded="Refresh" />
+
+<hr />
+
+<div>
+  <label>Min score:</label>
+  <input type="number" @bind="minScore" />
+  <label>Sort:</label>
+  <select @bind="sort">
+    <option value="name">Name</option>
+    <option value="score">Score</option>
+  </select>
+  <button @onclick="ApplyQuery">Apply</button>
+
+</div>
+
+<StudentList Students="FilteredStudents" />
+
+@code{
+
+    private int minScore = 0;
+    private string sort = "name";
+
+    private Task Refresh() => Task.CompletedTask;
+    private IReadOnlyList<CounterApp.Models.Student> FilteredStudents => GetFiltered();
+
+    private IReadOnlyList<CounterApp.Models.Student> GetFiltered()
+    {
+        var q = StudentService.GetAll().Where(s => s.Score >= minScore);
+        q = sort == "score" ? q.OrderByDescending(s => s.Score) : q.OrderBy(s => s.Name);
+        return q.ToList();
+    }
+
+    private void ApplyQuery()
+    {
+        Nav.NavigateTo($"/students?minScore={minScore}&sort={sort}");
+    }
+
+    protected override void OnInitialized()
+    {
+        var uri = Nav.ToAbsoluteUri(Nav.Uri);
+        var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+
+        if(int.TryParse(query["minScore"], out var ms)){
+          minScore = ms;
+        }
+        if(!string.IsNullOrWhiteSpace(query["sort"])){
+          sort = query["sort"];
+        }
+    }
+
+
+}

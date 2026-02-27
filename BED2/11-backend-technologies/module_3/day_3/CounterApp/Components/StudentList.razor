@@ -1,0 +1,21 @@
+@using CounterApp.Models
+
+<h3>Students</h3>
+
+@if (Students is null || Students.Count == 0 ){
+  <p>No Students</p>
+}
+else {
+  <ul>
+    @foreach (var s in Students) {
+      <li>
+        <a href="@($"/students/{s.Id}")">@s.Name</a>
+        (Score: @s.Score)
+      </li>
+    }
+  </ul>
+}
+
+@code {
+  [Parameter] public IReadOnlyList<Student> Students {get; set;} = Array.Empty<Student>();
+}

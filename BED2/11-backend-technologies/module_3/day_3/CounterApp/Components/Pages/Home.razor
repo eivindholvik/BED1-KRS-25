@@ -1,0 +1,30 @@
+﻿@page "/"
+@page "/home"
+@inject NavigationManager NavManager
+@using Microsoft.AspNetCore.WebUtilities
+@using System.Runtime.CompilerServices
+
+<PageTitle>Home</PageTitle>
+
+<h1 role="status">Hello, @dispName</h1>
+
+<p>Welcome to your new app.</p>
+
+<h2>This is my cool counter</h2>
+<Counter CurrentCount="4" IncrementBy="3" />
+
+@code{
+
+  private string dispName = "No name";
+  protected override void OnParametersSet()
+    {
+        var uri = new Uri(NavManager.Uri);
+        var query = QueryHelpers.ParseQuery(uri.Query);
+
+        if (query.TryGetValue("name", out var myName))
+            dispName = myName.ToString();
+        else
+            dispName = "No name";
+    }
+
+}
