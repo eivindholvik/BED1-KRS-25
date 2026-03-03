@@ -25,5 +25,8 @@ public class Program
     End.Car truck = new End.Car("Toyota Hilux", new DieselEngine(50));
     truck.StartCar();
 
+    bool ok = int.TryParse("leif", out int n);
+    System.Console.WriteLine($"{ok} and {n}");
+
   }
 }

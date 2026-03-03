@@ -1,0 +1,12 @@
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\bin\Debug\net10.0\MathService.deps.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\bin\Debug\net10.0\MathService.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\bin\Debug\net10.0\MathService.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\MathService.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\MathService.AssemblyInfoInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\MathService.AssemblyInfo.cs
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\MathService.csproj.CoreCompileInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\MathService.sourcelink.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\MathService.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\refint\MathService.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\MathService.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_3\day_4\MathService\obj\Debug\net10.0\ref\MathService.dll

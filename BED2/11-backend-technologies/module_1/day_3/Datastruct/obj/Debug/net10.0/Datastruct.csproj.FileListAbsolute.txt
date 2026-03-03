@@ -1,0 +1,15 @@
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\bin\Debug\net10.0\Datastruct.exe
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\bin\Debug\net10.0\Datastruct.deps.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\bin\Debug\net10.0\Datastruct.runtimeconfig.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\bin\Debug\net10.0\Datastruct.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\bin\Debug\net10.0\Datastruct.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.AssemblyInfoInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.AssemblyInfo.cs
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.csproj.CoreCompileInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.sourcelink.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\refint\Datastruct.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\Datastruct.genruntimeconfig.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_1\day_3\Datastruct\obj\Debug\net10.0\ref\Datastruct.dll

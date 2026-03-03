@@ -1,0 +1,15 @@
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\bin\Debug\net10.0\DebuggDemo.exe
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\bin\Debug\net10.0\DebuggDemo.deps.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\bin\Debug\net10.0\DebuggDemo.runtimeconfig.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\bin\Debug\net10.0\DebuggDemo.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\bin\Debug\net10.0\DebuggDemo.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.AssemblyInfoInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.AssemblyInfo.cs
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.csproj.CoreCompileInputs.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.sourcelink.json
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\refint\DebuggDemo.dll
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.pdb
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\DebuggDemo.genruntimeconfig.cache
+C:\dev\BED1-KRS-25\BED2\11-backend-technologies\module_2\day_4\DebuggDemo\obj\Debug\net10.0\ref\DebuggDemo.dll

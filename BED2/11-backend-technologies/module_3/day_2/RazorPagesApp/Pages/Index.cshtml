@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Message</h1>
+    <form method="post">
+        <div>
+            <label for="Firstname">First Name:</label>
+            <input type="text" id="Firstname" name="Firstname" />
+        </div>
+        <div>
+            <label for="Lastname">Last Name:</label>
+            <input type="text" id="Lastname" name="Lastname" />
+        </div>
+        <div>
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email" />
+        </div>
+        <button class="btn btn-default">Click to Post</button>
+    </form>
+    @if (ViewData["confirmation"] is string msg)
+    {
+        <p>@msg</p>
+    }
+    <p><a href="/" class="btn btn-default">Click to Get</a></p>
+    
+</div>

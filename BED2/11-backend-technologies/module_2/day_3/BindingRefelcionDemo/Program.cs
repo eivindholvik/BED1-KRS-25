@@ -1,14 +1,11 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Data;
 using System.Reflection;
 
+// Task after demo
 // Add a public static string Company = "Something"; to Employee class
 // Update DumpFieldsAndProperties to include BindingFlag.Static and see it appear.
 //Add another method in Employee class with the "Tag name" of Command.
 // Small extra step. Modify the RunCommands method to include an additional Parameter string "FuncType", and try using it with "Accessor"
-
-
 
 # region 1) Custom Attribute
 
@@ -30,6 +27,7 @@ public sealed class MyCustomAttribute : Attribute
 [MyCustom("Model", "Represents an employee")]
 public class Employee
 {
+  public static string Company = "Hansen og Co";
   private int age;
   private readonly string fullname;
   [MyCustom("Accessor", "Exposes employee id")]
@@ -55,16 +53,33 @@ public class Employee
     System.Console.WriteLine($"Employee #{Id}: {FullName}, age {age}");
   }
 
+  public static void SetCompany(string comp)
+  {
+    Company = comp;
+  }
+
+  public static string GetCompany()
+  {
+    return Company;
+  }
+
 
 }
 
 #endregion
 
+
 public static class Program
 {
-  public static void Main(string[] args) {
+  public static void Main(string[] args) {            
+
+
     Employee emp = new Employee(6, "John Smith");
+    Employee emp2 = new Employee(5, "Ola Normann");
     emp.SetAge(30);
+    Employee.SetCompany("Hennig Olsen");
+    System.Console.WriteLine(Employee.GetCompany());
+    
 
     System.Console.WriteLine("Early binding (normal calls)");
     System.Console.WriteLine(emp.FullName);
@@ -79,6 +94,7 @@ public static class Program
 
     System.Console.WriteLine("Late binding: invoke methods tagged as Command");
     RunCommands(emp);
+
   }
 
   private static void DumpFieldsAndProperties(Type t)
