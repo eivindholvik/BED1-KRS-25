@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+//This is a repo test. Which makes me wonder, do the students not use Interfaces? they are so fun...
 builder.Services.AddSingleton<StudentService>();
 
 var app = builder.Build();
