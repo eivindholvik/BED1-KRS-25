@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VwMMrhP2RY0=",
+  "success": true,
+  "projectFilePath": "C:\\Repos\\BED1-KRS-25\\BED2\\11-backend-technologies\\moldue_4\\day_3\\DependencyInjectionDemo\\DependencyInjectionDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\noro-Ariana.Rubio\\.nuget\\packages\\autofac\\9.0.0\\autofac.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
